@@ -3,3 +3,4 @@
 <h2>ユーザー名リンク</h2> <!--あとで差し替え-->
 <p><%= @book.title %></p>
 <p><%= @book.body %></p>
+<%= link_to "Edit", edit_book_path(@book.id) %>
