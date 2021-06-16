@@ -19,12 +19,4 @@ ActiveRecord::Schema.define(version: 2021_06_16_035128) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.text "name"
-    t.text "introduction"
-    t.string "profile_image_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
 end
