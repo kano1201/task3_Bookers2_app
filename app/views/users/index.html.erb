@@ -1,8 +1,8 @@
 <h1>Users</h1>
 <% @users.each do |user| %>
   <p>image</p>
-  <!--ユーザイメージ-->
+  <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"%>
   <p>name</p>
   <span><%= user.name %></span>
-  <!--showでユーザーshow画面へ-->
-<% end %>
+  <%= link_to "Show", user_path(user.id) %>
+<% end %>git 
