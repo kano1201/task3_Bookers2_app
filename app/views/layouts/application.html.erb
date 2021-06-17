@@ -9,7 +9,34 @@
   </head>
 
   <body>
-  
+    <% if user_signed_in? %>
+      <li>
+        <%= link_to "Home", user_path(id: current_user) %>
+      </li>
+      <li>
+        <%= link_to "Users", users_path %>
+      </li>
+      <li>
+        <%= link_to "Books", books_path %>
+      </li>
+      <li>
+        <%= link_to "logout", destroy_user_session_path, method: :delete %>  <!--ログイン後-->
+      </li>
+    <% else %>　<!--ログイン前-->
+      <li>
+        <%= link_to "Home", root_path %>
+      </li>
+      <li>
+        <%= link_to "About", homes_path %>
+      </li>
+      <li>
+        <%= link_to "Sign Up", new_user_registration_path %>
+      </li>
+      <li>
+        <%= link_to "Log in", new_user_session_path %>
+      </li>
+    <% end %>
+
     <%= yield %>
   </body>
 
