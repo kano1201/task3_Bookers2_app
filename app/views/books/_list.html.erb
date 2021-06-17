@@ -1,3 +1,12 @@
+<h1>User info</h1>
+<%= attachment_image_tag @user, :profile_image, :fill, 60, 60, fallback: "no_image.jpg"%>
+<h4>name</h4>
+<span><%= @user.name %></span>
+<h4>introduction</h4>
+<span><%= @user.introduction %></span>
+
+<%= link_to "User Edit", user_edit_path(user.id) %>
+
 <h1>New book</h1> <!--新規投稿画面Book-->
 <% if @book.errors.any? %>
   <%= @book.errors.count %>errors
