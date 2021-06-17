@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @books = @user.books.reverse_order
+    @books = Book.all
   end
 
   def edit
